@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "cpiapi";
+option java_outer_classname = "CpiApiProto";
+
+import "google/protobuf/timestamp.proto";
+
+package cpiapi;
+
+service CpiApi {
+  rpc GetCpiTimeSerie (GetCpiTimeRequest) returns (GetCpiTimeResponse) {}
+}
+
+message GetCpiTimeRequest {
+  CpiType cpiType = 1;
+}
+
+enum CpiType {
+  INDEX = 0;
+  MOM_RATE = 1; 
+  YOY_RATE = 2;
+}
+
+message GetCpiTimeResponse {
+  repeated Result results = 1;
+}
+
+// The month will be always defined on the first day of the month, e.g: 2023-04 will be 2023-04-01T00:00:00Z
+message Result {
+  google.protobuf.Timestamp month = 1;
+  double value = 2;
+}
