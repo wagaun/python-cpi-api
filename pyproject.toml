@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "python-cpi-api"
+version = "0.1.0"
+description = "Project to play with Python and GRPC"
+authors = ["Wagner Tsuchiya <wagaun@gmail.com>"]
+readme = "README.md"
+packages = [{include = "python_cpi_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+grpcio-tools = "^1.54.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
