@@ -11,6 +11,7 @@ def testGrpcEndpoint():
     stub = cpi_api_pb2_grpc.CpiApiStub(channel)
     request = cpi_api_pb2.GetCpiTimeRequest()
     timeSeries = stub.GetCpiTimeSerie(request)
+    assert len(timeSeries.results) == 2
     assert timeSeries.results[0].value == 42.0
     ts = timeSeries.results[0].month
     print(ts)

@@ -35,3 +35,4 @@ There are a few steps that are important to start development:
 - protoc generated files are not working properly.
 - grpcurl command doesn't work
 - contenariaze the service
+- build executing flake8
