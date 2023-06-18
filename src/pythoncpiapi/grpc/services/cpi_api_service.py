@@ -3,6 +3,7 @@ import generated.cpi_api_pb2_grpc as grpcapi
 from google.protobuf.timestamp_pb2 import Timestamp
 from datetime import datetime
 
+
 class CpiApiService(grpcapi.CpiApiServicer):
     def GetCpiTimeSerie(self, request, context):
         outputDT = datetime(2023, 4, 1)
@@ -12,4 +13,3 @@ class CpiApiService(grpcapi.CpiApiServicer):
             grpcmodel.Result(month=outputTS, value=42.0)
         ])
         return response
-        

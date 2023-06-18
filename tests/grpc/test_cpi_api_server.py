@@ -5,7 +5,8 @@ from datetime import datetime
 import pythoncpiapi.grpc.generated.cpi_api_pb2_grpc as cpi_api_pb2_grpc
 import pythoncpiapi.grpc.generated.cpi_api_pb2 as cpi_api_pb2
 
-def test():
+
+def testGrpcEndpoint():
     channel = grpc.insecure_channel('localhost:50051')
     stub = cpi_api_pb2_grpc.CpiApiStub(channel)
     request = cpi_api_pb2.GetCpiTimeRequest()
@@ -17,4 +18,3 @@ def test():
     assert dt.day == 1
     # assert dt.month == 4
     assert dt.year == 2023
-    
