@@ -28,6 +28,9 @@ There are a few steps that are important to start development:
 - grpcurl command for testing
 ``grpcurl -plaintext localhost:50051 cpiapi.CpiApi/GetCpiTimeSerie``
 
+- start docker containers
+``docker-compose up``
+
 # Known issues/next steps
 - protoc generated files are not working properly.
 - grpcurl command doesn't work
