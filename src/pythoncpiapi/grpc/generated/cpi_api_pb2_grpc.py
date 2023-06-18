@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import cpi_api_pb2 as cpi__api__pb2
+from . import cpi_api_pb2 as cpi__api__pb2
 
 
 class CpiApiStub(object):

@@ -13,5 +13,22 @@ There are a few steps that are important to start development:
 - Install dependencies
 ``poetry install --no-root``
 
-How to compile the proto files
-``python3 -m grpc_tools.protoc -Iprotos --python_out=src/python-cpi-api/grpc/generated --pyi_out=src/python-cpi-api/grpc/generated --grpc_python_out=src/python-cpi-api/grpc/generated protos/cpi-api.proto``
+- How to compile the proto files
+``python3 -m grpc_tools.protoc -Iprotos --python_out=src/pythoncpiapi/grpc/generated --pyi_out=src/pythoncpiapi/grpc/generated --grpc_python_out=src/pythoncpiapi/grpc/generated protos/cpi-api.proto``
+
+- Flake
+``flake8``
+
+- Run the service
+``python3 src/pythoncpiapi/grpc/cpi_api_server.py``
+
+- Run tests (it must be executed with the service running for now)
+``pytest``
+
+- grpcurl command for testing
+``grpcurl -plaintext localhost:50051 cpiapi.CpiApi/GetCpiTimeSerie``
+
+# Known issues/next steps
+- protoc generated files are not working properly.
+- grpcurl command doesn't work
+- contenariaze the service

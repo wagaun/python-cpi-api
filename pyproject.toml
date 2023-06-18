@@ -9,6 +9,8 @@ packages = [{include = "python_cpi_api"}]
 [tool.poetry.dependencies]
 python = "^3.8.1"
 grpcio-tools = "^1.54.2"
+grpcio = "^1.54.2"
+flake8 = "^6.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.2"
