@@ -1,5 +1,7 @@
 # python-cpi-api
-API Made to learn python
+API Made to refresh my knowledge on python.
+
+It's grpc endpoint that queries a postgres db and returns values.
 
 ## Setup
 Follow instructions from [here](https://python-poetry.org/docs/) to setup Poetry.
@@ -36,3 +38,4 @@ There are a few steps that are important to start development:
 - grpcurl command doesn't work
 - contenariaze the service
 - build executing flake8
+- Query to load csv file with CPI data
